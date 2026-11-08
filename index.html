@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LestariLokal - Reboisasi & Donasi Lingkungan Purwakarta</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#2E7D32',
+                        forestDark: '#1B5E20',
+                        forestLight: '#4CAF50',
+                        cream: '#F9FBF7',
+                        schoolBlue: '#0284C7'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F9FBF7;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- NAVIGATION BAR INTERAKTIF -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-forest text-white flex items-center justify-center font-bold text-lg shadow">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold text-gray-900 tracking-tight block leading-none">LestariLokal</span>
+                    <span class="text-[10px] font-bold text-forest uppercase tracking-widest mt-1 block">Reboisasi Purwakarta</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
+                <a href="#program" class="hover:text-forest transition">Program Purwakarta</a>
+                <a href="#donasi" class="hover:text-forest transition">Cara Donasi</a>
+                <a href="#dampak" class="hover:text-forest transition">Dampak Real</a>
+                <a href="#bukti" class="hover:text-forest transition">Bukti Aksi</a>
+                <a href="#warga-pelajar" class="text-schoolBlue hover:underline flex items-center gap-1"><i class="fa-solid fa-graduation-cap"></i> Pelajar & Warga</a>
+                <a href="#kontak" class="hover:text-forest transition">FAQ & Kontak</a>
+            </nav>
+
+            <div class="hidden sm:block">
+                <a href="#donasi" class="bg-forest hover:bg-forestDark text-white px-5 py-2.5 rounded-full font-bold text-sm shadow transition flex items-center gap-2">
+                    <i class="fa-solid fa-heart text-amber-300"></i> Mulai Berbagi
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-gray-700 p-2 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-4 space-y-3 font-semibold text-sm">
+            <a href="#program" class="block py-1 text-gray-700">Program Purwakarta</a>
+            <a href="#donasi" class="block py-1 text-gray-700">Cara Donasi</a>
+            <a href="#dampak" class="block py-1 text-gray-700">Dampak Real</a>
+            <a href="#bukti" class="block py-1 text-gray-700">Bukti Aksi</a>
+            <a href="#warga-pelajar" class="block py-1 text-schoolBlue font-bold">Pelajar & Warga</a>
+            <a href="#kontak" class="block py-1 text-gray-700">FAQ & Kontak</a>
+            <a href="#donasi" class="block text-center bg-forest text-white py-2.5 rounded-xl font-bold mt-2">Mulai Berbagi</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="py-12 md:py-20 bg-gradient-to-b from-green-50/70 via-cream to-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-forest text-xs sm:text-sm font-bold shadow-sm">
+                        <i class="fa-solid fa-location-dot text-red-500"></i> Fokus Kawasan Purwakarta & Paranggombong
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
+                        Hijaukan Purwakarta, <br>
+                        <span class="text-forest">Mulai dari Lingkungan Sekitar.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Salurkan bantuan berupa <span class="font-bold text-gray-800">dana operasional</span> maupun <span class="font-bold text-gray-800">bibit pohon & tanaman</span> untuk aksi lingkungan di wilayah Kabupaten Purwakarta dan Paranggombong.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
+                        <a href="#donasi" class="bg-forest hover:bg-forestDark text-white px-7 py-3.5 rounded-xl font-bold text-sm shadow-lg transition text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-seedling text-amber-300"></i> Donasi Sekarang
+                        </a>
+                        <a href="#program" class="bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 px-7 py-3.5 rounded-xl font-bold text-sm shadow-sm transition text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-compass text-forest"></i> Lihat Aksi di Purwakarta
+                        </a>
+                    </div>
+
+                    <!-- Statistik Singkat -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-emerald-100/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-xl sm:text-2xl font-black text-gray-900">100%</div>
+                            <div class="text-[11px] text-gray-500 font-medium">Laporan Transparan</div>
+                        </div>
+                        <div>
+                            <div class="text-xl sm:text-2xl font-black text-forest">2,450+</div>
+                            <div class="text-[11px] text-gray-500 font-medium">Pohon Tertanam</div>
+                        </div>
+                        <div>
+                            <div class="text-xl sm:text-2xl font-black text-gray-900">12 Kec.</div>
+                            <div class="text-[11px] text-gray-500 font-medium">Di Purwakarta</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartu Aksi Utama Sisi Kanan -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gray-900 group">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Reboisasi" class="w-full h-96 object-cover opacity-80 group-hover:scale-105 transition duration-500">
+                        
+                        <div class="absolute top-4 left-4 bg-amber-500 text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                            Aksi Utama Pekan Ini
+                        </div>
+
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 text-white space-y-3">
+                            <h3 class="text-xl font-bold">Reboisasi Paranggombong - Sukasari</h3>
+                            
+                            <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/20 flex items-center gap-3">
+                                <div class="bg-amber-500 p-2 rounded-lg text-white">
+                                    <i class="fa-solid fa-truck-fast text-xs"></i>
+                                </div>
+                                <div class="text-xs">
+                                    <div class="font-bold text-amber-300">Layanan Jemput Barang</div>
+                                    <div class="text-gray-200 text-[11px]">Area Purwakarta Kota & Sekitarnya</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CARA BERBAGI & PILIH NOMINAL INTERAKTIF -->
+    <section id="donasi" class="py-16 bg-white border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-forest bg-green-100 px-3 py-1 rounded-full">Metode Kontribusi</span>
+                <h2 class="text-3xl font-black text-gray-900">Pilih Cara Anda Berbagi</h2>
+                <p class="text-gray-600 text-sm">Salurkan bantuan Anda melalui donasi dana atau pengiriman barang & bibit tanaman ke posko Purwakarta.</p>
+            </div>
+
+            <!-- Card Utama Kalkulator Donasi & Alokasi -->
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-emerald-100 grid md:grid-cols-2 gap-8 items-center">
+                
+                <!-- Sisi Kiri: Pilihan Nominal Interaktif -->
+                <div class="space-y-4">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 text-forest rounded-full text-xs font-bold border border-emerald-200">
+                        <i class="fa-solid fa-shield-halved"></i> Transparan 100%
+                    </div>
+                    <h3 class="text-xl font-black text-gray-900">Pilih Nominal Donasi</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Setiap Rupiah dari Anda digunakan untuk pembelian bibit dan operasional relawan di wilayah Purwakarta.</p>
+
+                    <!-- Tombol Nominal Interaktif (Bisa Diklik) -->
+                    <div class="grid grid-cols-2 gap-3 pt-2">
+                        <button type="button" onclick="pilihNominal('Rp 20.000')" class="nominal-btn py-3 px-4 rounded-xl border-2 border-forest bg-green-50/50 text-forest font-bold text-sm text-center transition hover:shadow">Rp 20.000</button>
+                        <button type="button" onclick="pilihNominal('Rp 50.000')" class="nominal-btn py-3 px-4 rounded-xl border border-gray-200 text-gray-700 font-bold text-sm text-center transition hover:border-forest">Rp 50.000</button>
+                        <button type="button" onclick="pilihNominal('Rp 100.000')" class="nominal-btn py-3 px-4 rounded-xl border border-gray-200 text-gray-700 font-bold text-sm text-center transition hover:border-forest">Rp 100.000</button>
+                        <button type="button" onclick="pilihNominal('Nominal Bebas')" class="nominal-btn py-3 px-4 rounded-xl border border-gray-200 text-gray-700 font-bold text-sm text-center transition hover:border-forest">Nominal Lain</button>
+                    </div>
+
+                    <a id="link-dhea" href="https://wa.me/62895329917375?text=Halo%20Kak%20Dhea,%20saya%20ingin%20berdonasi%20uang%20sebesar%20Rp%2020.000%20untuk%20LestariLokal." target="_blank" class="block w-full bg-forest hover:bg-forestDark text-white font-bold py-3.5 rounded-xl text-center text-sm shadow transition">
+                        Lanjut ke Pembayaran via Dhea (+62 895-3299-17375)
+                    </a>
+                </div>
+
+                <!-- Sisi Kanan: Alokasi Dana Purwakarta -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="font-extrabold text-sm text-gray-900">ALOKASI DANA PURWAKARTA</span>
+                        <i class="fa-solid fa-circle-info text-forest"></i>
+                    </div>
+
+                    <div class="space-y-3 text-xs">
+                        <div>
+                            <div class="flex justify-between font-bold mb-1">
+                                <span>Pembelian Bibit Pohon & Pupuk</span>
+                                <span class="text-forest">60%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-forest h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between font-bold mb-1">
+                                <span>Peralatan Berkebun & Perawatan</span>
+                                <span class="text-amber-600">25%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-amber-500 h-2 rounded-full" style="width: 25%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between font-bold mb-1">
+                                <span>Operasional Relawan Lapangan</span>
+                                <span class="text-sky-600">15%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-schoolBlue h-2 rounded-full" style="width: 15%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-[11px] text-gray-500 pt-2 border-t border-gray-200">
+                        <i class="fa-solid fa-check text-forest mr-1"></i> Laporan keuangan dan foto lokasi reboisasi dikirim berkala kepada para donatur.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Informasi Donasi Barang & Tanaman -->
+            <div class="max-w-4xl mx-auto mt-6 bg-emerald-50 rounded-2xl p-6 border border-emerald-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="space-y-1 text-center sm:text-left">
+                    <h4 class="font-bold text-gray-900 text-sm"><i class="fa-solid fa-seedling text-forest mr-1.5"></i> Ingin Donasi Bibit, Pupuk, atau Media Tanam Organik?</h4>
+                    <p class="text-xs text-gray-600">Koordinasikan langsung pengiriman barang atau jadwal penjemputan dengan tim kami.</p>
+                </div>
+                <a href="https://wa.me/6287826341078?text=Halo%20Kak%20Elsyana,%20saya%20ingin%20berdonasi%20bibit/pupuk/media%20tanam." target="_blank" class="bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-3 rounded-xl font-bold text-xs shadow flex-shrink-0">
+                    Konfirmasi ke Elsyana (+62 878-2634-1078)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: PROGRAM REBOISASI PURWAKARTA (Hasil Dana Terkumpul Sekitar 6 Jutaan Tanpa Target Kaku) -->
+    <section id="program" class="py-16 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-forest bg-green-100 px-3 py-1 rounded-full">AKSI PURWAKARTA</span>
+                    <h2 class="text-3xl font-black text-gray-900 mt-2">Program Reboisasi Terdekat</h2>
+                    <p class="text-gray-600 text-sm mt-1">Perolehan dana dan pengumpulan aktual di wilayah Kabupaten Purwakarta.</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-xs font-bold text-forest bg-white px-4 py-2 rounded-xl border border-emerald-200 shadow-sm">
+                    <i class="fa-solid fa-map-location-dot mr-1"></i> Area: Kabupaten Purwakarta & Sekitarnya
+                </div>
+            </div>
+
+            <!-- 3 Kartu Program (Menampilkan Hasil Aktual Sekitar 6 Juta) -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Kartu 1 -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Sukasari" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-[#4CAF50] text-white text-xs font-bold px-3 py-1 rounded-full shadow">Sukasari, Purwakarta</span>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <h3 class="font-bold text-gray-900 text-base">Penanaman 500 Pohon Mahoni Paranggombong</h3>
+                            <p class="text-xs text-gray-600 line-clamp-2">Reboisasi area pinggir danau & perbukitan Paranggombong untuk pencegahan erosi serta...</p>
+                            
+                            <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-100 text-xs space-y-1">
+                                <div class="font-bold text-gray-500 uppercase text-[10px]">Perolehan Dana Terkumpul</div>
+                                <div class="text-lg font-black text-forest">Rp 6.850.000</div>
+                                <div class="text-[11px] text-gray-600">300 Bibit Pohon & 120 Paket Pupuk Organik</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="#donasi" class="block w-full bg-emerald-50 text-forest border border-emerald-200 text-center py-2.5 rounded-xl font-bold text-xs hover:bg-forest hover:text-white transition">Dukung Program Ini</a>
+                    </div>
+                </div>
+
+                <!-- Kartu 2 -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Wanayasa" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-[#2E7D32] text-white text-xs font-bold px-3 py-1 rounded-full shadow">Wanayasa, Purwakarta</span>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <h3 class="font-bold text-gray-900 text-base">Reboisasi Kaki Gunung Burangrang</h3>
+                            <p class="text-xs text-gray-600 line-clamp-2">Penanaman bibit pohon keras & tanaman buah di kawasan lereng Wanayasa demi kelestarian...</p>
+                            
+                            <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-100 text-xs space-y-1">
+                                <div class="font-bold text-gray-500 uppercase text-[10px]">Perolehan Dana Terkumpul</div>
+                                <div class="text-lg font-black text-forest">Rp 4.200.000</div>
+                                <div class="text-[11px] text-gray-600">210 Bibit Pohon Keras & Buah</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="#donasi" class="block w-full bg-emerald-50 text-forest border border-emerald-200 text-center py-2.5 rounded-xl font-bold text-xs hover:bg-forest hover:text-white transition">Dukung Program Ini</a>
+                    </div>
+                </div>
+
+                <!-- Kartu 3 -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80" alt="Jatiluhur" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-[#D83A00] text-white text-xs font-bold px-3 py-1 rounded-full shadow">Jatiluhur, Purwakarta</span>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <h3 class="font-bold text-gray-900 text-base">Taman Hijau & Bank Sampah Resik</h3>
+                            <p class="text-xs text-gray-600 line-clamp-2">Penyediaan sarana komposter organik serta pembuatan ruang terbuka hijau komunitas warga...</p>
+                            
+                            <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-100 text-xs space-y-1">
+                                <div class="font-bold text-gray-500 uppercase text-[10px]">Bahan & Tanaman Terkumpul</div>
+                                <div class="text-lg font-black text-forest">85 Paket Kompos & Bibit</div>
+                                <div class="text-[11px] text-gray-600">Dukungan Swadaya Masyarakat & Pelajar</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="#donasi" class="block w-full bg-amber-50 text-amber-900 border border-amber-200 text-center py-2.5 rounded-xl font-bold text-xs hover:bg-amber-600 hover:text-white transition">Dukung Program Ini</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: BUKTI AKSI NYATA -->
+    <section id="bukti" class="py-16 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-forest bg-green-100 px-3 py-1 rounded-full">Transparan</span>
+                <h2 class="text-3xl font-black text-gray-900">Bukti Aksi Nyata di Lapangan</h2>
+                <p class="text-gray-600 text-sm">Dokumentasi foto kegiatan penanaman pohon, distribusi pupuk organik, dan aksi warga di Purwakarta.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Foto 1 -->
+                <div class="bg-cream rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                    <img src="https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Penanaman Warga" class="w-full h-48 object-cover">
+                    <div class="p-5 space-y-1">
+                        <span class="text-[10px] font-bold text-forest bg-green-50 px-2.5 py-1 rounded-full">Paranggombong</span>
+                        <h4 class="font-bold text-gray-900 text-base mt-1">Aksi Tanam Bibit Bersama Warga</h4>
+                        <p class="text-xs text-gray-600">Turun langsung menanam pohon pelindung di lahan dan perbukitan warga.</p>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="bg-cream rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                    <img src="https://images.pexels.com/photos/7656754/pexels-photo-7656754.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Penyerahan Bahan" class="w-full h-48 object-cover">
+                    <div class="p-5 space-y-1">
+                        <span class="text-[10px] font-bold text-schoolBlue bg-sky-50 px-2.5 py-1 rounded-full">Sekolah & Pelajar</span>
+                        <h4 class="font-bold text-gray-900 text-base mt-1">Distribusi Pupuk & Media Tanam</h4>
+                        <p class="text-xs text-gray-600">Penyaluran bahan organik dan bibit langsung ke sekolah dan kelompok belajar.</p>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="bg-cream rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                    <img src="https://images.pexels.com/photos/4503267/pexels-photo-4503267.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Perawatan Tanaman" class="w-full h-48 object-cover">
+                    <div class="p-5 space-y-1">
+                        <span class="text-[10px] font-bold text-forest bg-green-50 px-2.5 py-1 rounded-full">Purwakarta</span>
+                        <h4 class="font-bold text-gray-900 text-base mt-1">Perawatan & Penyiraman Berkala</h4>
+                        <p class="text-xs text-gray-600">Pemeliharaan rutin bersama relawan agar bibit tumbuh subur dan hijau.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: DAMPAK NYATA -->
+    <section id="dampak" class="py-16 bg-forest text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
+            <div class="max-w-2xl mx-auto space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-green-200 bg-forestDark px-3 py-1 rounded-full border border-green-600">Dampak Nyata</span>
+                <h2 class="text-3xl font-black">Jejak Kebaikan di Purwakarta</h2>
+                <p class="text-green-100 text-sm">Hasil gotong royong warga Purwakarta dan komunitas lokal hingga saat ini.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-forestDark/60 border border-green-600/50 p-6 rounded-2xl space-y-2 shadow-inner">
+                    <i class="fa-solid fa-tree text-green-300 text-2xl mb-1"></i>
+                    <div class="text-3xl font-black">2,450+</div>
+                    <div class="text-xs text-green-200 font-medium">Pohon Tertanam</div>
+                </div>
+
+                <div class="bg-forestDark/60 border border-green-600/50 p-6 rounded-2xl space-y-2 shadow-inner">
+                    <i class="fa-solid fa-recycle text-amber-300 text-2xl mb-1"></i>
+                    <div class="text-3xl font-black">8.2 Ton</div>
+                    <div class="text-xs text-green-200 font-medium">Sampah Terolah</div>
+                </div>
+
+                <div class="bg-forestDark/60 border border-green-600/50 p-6 rounded-2xl space-y-2 shadow-inner">
+                    <i class="fa-solid fa-users text-sky-300 text-2xl mb-1"></i>
+                    <div class="text-3xl font-black">950+</div>
+                    <div class="text-xs text-green-200 font-medium">Donatur Lokal</div>
+                </div>
+
+                <div class="bg-forestDark/60 border border-green-600/50 p-6 rounded-2xl space-y-2 shadow-inner">
+                    <i class="fa-solid fa-map text-yellow-300 text-2xl mb-1"></i>
+                    <div class="text-3xl font-black">12 Kec.</div>
+                    <div class="text-xs text-green-200 font-medium">Wilayah Purwakarta</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: AKSI PELAJAR & WARGA -->
+    <section id="warga-pelajar" class="py-16 bg-cream border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-sky-900 to-teal-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-4">
+                        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/30 text-sky-200 text-xs font-bold border border-sky-400/30">
+                            <i class="fa-solid fa-graduation-cap"></i> Program Warga & Pelajar Purwakarta
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl font-black leading-tight">
+                            Aksi Pelajar & Masyarakat Sekitar (RT)
+                        </h2>
+                        <p class="text-sky-100 text-sm sm:text-base leading-relaxed">
+                            Program ini terbuka tidak hanya untuk pelajar sekolah, tetapi juga warga sekitar (tingkat RT). Sekolah atau kelompok warga dapat menyumbang tanaman langsung, bahan penunjang (pupuk, media tanam organik, bibit), maupun uang secara kolektif dan transparan.
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-5 bg-white text-gray-800 p-6 rounded-2xl shadow-lg">
+                        <h3 class="font-bold text-base mb-3 text-center border-b pb-2 text-sky-800">
+                            <i class="fa-solid fa-school mr-1"></i> Form Laporan Sumbangan Warga / Pelajar
+                        </h3>
+                        <form onsubmit="alert('Data berhasil disiapkan! Silakan konfirmasi via WhatsApp ke panitia.'); return true;" action="https://wa.me/62895329917375" method="get" target="_blank" class="space-y-3 text-xs">
+                            <div>
+                                <label class="block font-bold text-gray-700 mb-1">Nama Asal (Sekolah / Kelas / RT)</label>
+                                <input type="text" name="text" placeholder="Contoh: SMAN 1 Purwakarta / Kelas XII.F8 / RT 04" class="w-full px-3 py-2 rounded-xl border border-gray-200 focus:outline-none focus:border-schoolBlue" required>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-gray-700 mb-1">Bentuk Sumbangan</label>
+                                <select class="w-full px-3 py-2 rounded-xl border border-gray-200 focus:outline-none focus:border-schoolBlue">
+                                    <option>Tanaman Langsung / Bibit</option>
+                                    <option>Pupuk & Media Tanam Organik</option>
+                                    <option>Dana Tunai / Sukarela</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-schoolBlue text-white font-bold py-2.5 rounded-xl shadow transition hover:bg-sky-700">
+                                Kirim & Konfirmasi via WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & KONTAK PERSON -->
+    <footer id="kontak" class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 pb-8 border-b border-gray-800 text-xs">
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                        <div class="w-7 h-7 rounded-lg bg-forest text-white flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-leaf text-xs"></i>
+                        </div>
+                        <span class="font-bold text-base">LestariLokal</span>
+                    </div>
+                    <p class="text-gray-400">Platform aksi donasi lingkungan & reboisasi Purwakarta dan sekitarnya.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-white mb-3">Kontak Person Resmi</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>
+                            <i class="fa-brands fa-whatsapp text-green-400 mr-1"></i>
+                            <a href="https://wa.me/62895329917375" target="_blank" class="hover:underline font-bold text-white">+62 895-3299-17375</a> 
+                            <span class="text-gray-400">( Dhea )</span>
+                        </p>
+                        <p>
+                            <i class="fa-brands fa-whatsapp text-green-400 mr-1"></i>
+                            <a href="https://wa.me/6287826341078" target="_blank" class="hover:underline font-bold text-white">+62 878-2634-1078</a> 
+                            <span class="text-gray-400">( Elsyana )</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-white mb-3">Posko Utama</h4>
+                    <p class="text-gray-400"><i class="fa-solid fa-location-dot text-red-400 mr-1"></i> Paranggombong & Sekitar Kabupaten Purwakarta, Jawa Barat</p>
+                </div>
+            </div>
+
+            <div class="pt-6 text-center text-xs text-gray-500">
+                &copy; 2026 LestariLokal Purwakarta. Seluruh Hak Cipta Dilindungi.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT INTERAKTIF (Tombol Nominal & Menu Mobile) -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fungsi agar tombol nominal donasi bisa diklik dan otomatis mengubah link WhatsApp ke Dhea
+        function pilihNominal(nominal) {
+            const buttons = document.querySelectorAll('.nominal-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-2', 'border-forest', 'bg-green-50/50', 'text-forest');
+                btn.classList.add('border', 'border-gray-200', 'text-gray-700');
+            });
+            event.target.classList.remove('border', 'border-gray-200', 'text-gray-700');
+            event.target.classList.add('border-2', 'border-forest', 'bg-green-50/50', 'text-forest');
+
+            const linkDhea = document.getElementById('link-dhea');
+            linkDhea.href = `https://wa.me/62895329917375?text=Halo%20Kak%20Dhea,%20saya%20ingin%20berdonasi%20uang%20sebesar%20${encodeURIComponent(nominal)}%20untuk%20LestariLokal.`;
+        }
+    </script>
+</body>
+</html>
